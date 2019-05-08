@@ -16,8 +16,8 @@ matrix:
         - export PATH=$HOME/miniconda3/bin:$PATH
         - export CC=clang
         - conda update --yes conda
-        - conda install -c pytorch pytorch-nightly
-        - cd catbug
+        - conda install --yes -c pytorch pytorch-nightly
+        - cd test-osx-issue
       script:
-        - python setup.py build
+        - python setup.py develop
         - python run.py
